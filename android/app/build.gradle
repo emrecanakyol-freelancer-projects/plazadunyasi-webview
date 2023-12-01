@@ -105,6 +105,8 @@ android {
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
+    //react-native-splash-screen
+    implementation project(':react-native-splash-screen')
     implementation("com.facebook.react:react-android")
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")

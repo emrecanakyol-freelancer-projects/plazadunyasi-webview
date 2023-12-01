@@ -3,6 +3,8 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { SafeAreaView, RefreshControl, ScrollView, BackHandler, Alert } from 'react-native';
 import { WebView } from 'react-native-webview';
+import SplashScreen from 'react-native-splash-screen';
+
 
 
 const App = () => {
@@ -22,6 +24,7 @@ const App = () => {
   }, [canGoBack]);
 
   useEffect(() => {
+    SplashScreen.hide();
     BackHandler.addEventListener('hardwareBackPress', handleBack);
     return () => {
       BackHandler.removeEventListener('hardwareBackPress', handleBack);
